@@ -5,6 +5,7 @@ import com.example.springbootfirst.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -13,6 +14,7 @@ public class EmployeeService {
     EmployeeRepository empRepo;
 
     public List<Employee> getMethod() {
+        System.out.println("Current Server Time: " + new Date());
         return empRepo.findAll();
     }
 
